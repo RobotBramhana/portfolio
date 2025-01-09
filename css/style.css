@@ -772,6 +772,79 @@ a:focus {
 .client_section .owl-carousel .owl-nav .owl-next:hover {
   color: #00204a;
 }
+/* Carousel takes full screen size */
+.carousel_section {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.owl-carousel .item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the image covers the area without distortion */
+}
+/* Custom style for carousel arrows */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.owl-prev, .owl-next {
+  background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 24px; /* Larger arrow size */
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.owl-prev:hover, .owl-next:hover {
+  background-color: #007fa4;  /* Color change on hover */
+}
+
+/* Left arrow positioning */
+.owl-prev {
+  left: 20px;
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-weight: 900;
+  content: '\f104';  /* FontAwesome left arrow */
+}
+
+/* Right arrow positioning */
+.owl-next {
+  right: 20px;
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-weight: 900;
+  content: '\f105';  /* FontAwesome right arrow */
+}
+
+/* For icon-based arrows, you can use Font Awesome icons or custom images */
+.owl-prev::before, .owl-next::before {
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
 
 /* client section end */
 .info_section {
