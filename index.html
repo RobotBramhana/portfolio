@@ -24,6 +24,7 @@
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
@@ -567,8 +568,10 @@
   <!-- footer section -->
   <section class="footer_section">
     <div class="container">
+      <p>
       Source code available <a class="nav-link" style="display: inline;"
         href="https://github.com/RobotBramhana/portfolio">here</a>
+        </p>
     </div>
   </section>
   <!-- footer section -->
@@ -590,7 +593,27 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $(".client_owl-carousel").owlCarousel({
+              loop: true,
+              margin: 20,
+              dots: true,
+              nav: false,
+              autoplay: true,
+              autoplayTimeout: 4000,
+              responsive: {
+                  0: { items: 1 },
+                  768: { items: 1 },
+                  1000: { items: 1 }
+              }
+          });
+      });
+  </script>
+  </body>
+  
 </body>
 
 </html>

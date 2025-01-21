@@ -794,15 +794,18 @@ a:focus {
 /* Custom style for carousel arrows */
 .owl-nav {
   position: absolute;
-  top: 50%;
+  bottom: 1px; /* Distance from bottom */
+  justify-content: center;
+  gap: 20px; /* Space between arrows */
+  /* top: 50%; */
   width: 100%;
   display: flex;
   justify-content: space-between;
-  transform: translateY(-50%);
+  transform: translateY(0%);
 }
 
 .owl-prev, .owl-next {
-  background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+  background-color: rgba(255, 3, 3, 0.5);  /* Semi-transparent background */
   color: #fff;
   border: none;
   padding: 10px;
@@ -817,12 +820,12 @@ a:focus {
 }
 
 .owl-prev:hover, .owl-next:hover {
-  background-color: #007fa4;  /* Color change on hover */
+  background-color: #ffffff;  /* Color change on hover */
 }
 
 /* Left arrow positioning */
 .owl-prev {
-  left: 20px;
+  left: auto;
   font-family: 'Font Awesome 5 Free', sans-serif;
   font-weight: 900;
   content: '\f104';  /* FontAwesome left arrow */
@@ -830,7 +833,7 @@ a:focus {
 
 /* Right arrow positioning */
 .owl-next {
-  right: 20px;
+  right: auto;
   font-family: 'Font Awesome 5 Free', sans-serif;
   font-weight: 900;
   content: '\f105';  /* FontAwesome right arrow */
@@ -1000,4 +1003,19 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+.carousel-wrap {
+    padding: 0 10px;
+    position: relative;
+}
+
+.box-img {
+    width: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.owl-carousel .item {
+    padding: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
